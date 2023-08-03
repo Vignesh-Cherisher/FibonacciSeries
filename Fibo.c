@@ -1,5 +1,5 @@
-#include <stdio.h>  
-int n1=0,n2=1,n3,NumberOfElements,Sum; 
+#include<stdio.h>
+int n1=0,n2=1,n3,i,NumberOfElements,Sum; 
 void getEvenNumbers(int arr[],int n,int even[]);
 int j=0;
 void getEvenNumbers(int arr[],int n,int even[]){
@@ -17,8 +17,6 @@ void generateFibonacciSeries(int Arr[],int num){
     if(num==1){
         Arr[0]=0;
     }
-    
-    
     Arr[0]=n1;
     Arr[1]=n2;
     if(num==2){
@@ -52,8 +50,7 @@ int main()
     for(int i=0;i<NumberOfElements;i++){
         printf("%d ",arr[i]);
     }
-    int Sum=SumSeries(arr,NumberOfElements);
-    printf("\nSum : %d",Sum);
+    
     int even[NumberOfElements];
     getEvenNumbers(arr,NumberOfElements,even);
     printf("\nEven Numbers: ");
