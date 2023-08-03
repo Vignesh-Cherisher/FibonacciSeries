@@ -39,11 +39,10 @@ void generateFibonacciSeries(int Arr[],int num){
     }
     return;
 }
+
 int SumSeries(int Arr[],int num)
 {
     int sum=0;
-
-
     for(int ind=0;ind<num-1;ind++)
     {
         sum+=Arr[ind];
