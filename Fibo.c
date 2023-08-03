@@ -45,8 +45,9 @@ int SumSeries(int Arr[],int num)
 
     for(int ind=0;ind<num;ind++)
     {
-        sum-=Arr[ind];
+        sum+=Arr[ind];
     }
+    sum+=Arr[n-1]+Arr[n-2];
     return sum;
 }
 int main()    
