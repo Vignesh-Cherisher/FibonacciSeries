@@ -1,5 +1,15 @@
 #include<stdio.h>
 int n1=0,n2=1,n3,i,NumberOfElements,Sum; 
+void getEvenNumbers(int arr[],int n,int even[]);
+int j=0;
+void getEvenNumbers(int arr[],int n,int even[]){
+    for(int i=0;i<n;i++){
+        if(arr[i]%2==0){
+            even[j]=arr[i];
+            j++;
+        }
+    }
+} 
 void generateFibonacciSeries(int Arr[],int num){
     if(num==0){
         return;
@@ -30,6 +40,13 @@ int main()
     printf("The Series : ");
     for(int i=0;i<NumberOfElements;i++){
         printf("%d ",arr[i]);
+    }
+    
+    int even[NumberOfElements];
+    getEvenNumbers(arr,NumberOfElements,even);
+    printf("\nEven Numbers: ");
+    for(int x=0;x<j;x++){
+        printf("%d ",even[x]);
     }
     return 0;  
 }  
