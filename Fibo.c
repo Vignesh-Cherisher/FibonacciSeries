@@ -47,7 +47,6 @@ int SumSeries(int Arr[],int num)
     {
         sum+=Arr[ind];
     }
-    sum+=Arr[n-1]+Arr[n-2];
     return sum;
 }
 int nthElement(int num){
