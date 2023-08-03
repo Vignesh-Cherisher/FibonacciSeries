@@ -1,5 +1,23 @@
-#include <stdio.h>  
-int n1=0,n2=1,n3,NumberOfElements,Sum; 
+#include<stdio.h>
+int n1=0,n2=1,n3,i,NumberOfElements,Sum; 
+void getEvenNumbers(int arr[],int n,int even[]);
+int j=0,m=0;
+void getEvenNumbers(int arr[],int n,int even[]){
+    for(int i=0;i<n;i++){
+        if(arr[i]%2==0){
+            even[j]=arr[i];
+            j++;
+        }
+    }
+} 
+void getOddNumbers(int arr[],int n,int odd[]){
+    for(int i=0;i<n;i++){
+        if(arr[i]%2!=0){
+            odd[m]=arr[i];
+            m++;
+        }
+    }
+} 
 void generateFibonacciSeries(int Arr[],int num){
     if(num==0){
         return;
@@ -40,7 +58,18 @@ int main()
     for(int i=0;i<NumberOfElements;i++){
         printf("%d ",arr[i]);
     }
-    int Sum=SumSeries(arr,NumberOfElements);
-    printf("\nSum : %d",Sum);
+    
+    int even[NumberOfElements];
+    getEvenNumbers(arr,NumberOfElements,even);
+    printf("\nEven Numbers: ");
+    for(int x=0;x<j;x++){
+        printf("%d ",even[x]);
+    }
+    int odd[NumberOfElements];
+    getOddNumbers(arr,NumberOfElements,odd);
+    printf("\nodd Numbers: ");
+    for(int x=0;x<m;x++){
+        printf("%d ",odd[x]);
+    }
     return 0;  
 }  
