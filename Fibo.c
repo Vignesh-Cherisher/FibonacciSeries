@@ -22,7 +22,7 @@ void generateFibonacciSeries(int Arr[],int num){
     if(num==2){
         return;
     }
-    for(i=2;i<NumberOfElements;++i)
+    for(int i=2;i<NumberOfElements;++i)
     {    
         n3=n1+n2;     
         Arr[i]=n3;
@@ -30,6 +30,15 @@ void generateFibonacciSeries(int Arr[],int num){
         n2=n3;    
     }
     return;
+}
+int SumSeries(int Arr[],int num)
+{
+    int sum=0;
+    for(int ind=0;ind<num;ind++)
+    {
+        sum+=Arr[ind];
+    }
+    return sum-1;
 }
 int main()    
 {    
