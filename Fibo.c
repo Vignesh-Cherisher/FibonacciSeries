@@ -43,7 +43,8 @@ int SumSeries(int Arr[],int num)
 {
     int sum=0;
 
-    for(int ind=0;ind<num;ind++)
+
+    for(int ind=0;ind<num-1;ind++)
     {
         sum+=Arr[ind];
     }
@@ -95,3 +96,4 @@ int main()
     }
     printf("\nThe %d th element is : %d",NumberOfElements,nthElement(NumberOfElements));
     return 0;  
+}
