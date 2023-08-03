@@ -42,11 +42,13 @@ void generateFibonacciSeries(int Arr[],int num){
 int SumSeries(int Arr[],int num)
 {
     int sum=0;
+
     for(int ind=0;ind<num;ind++)
     {
         sum+=Arr[ind];
     }
-    return sum-1;
+    sum += Arr[num-1]+Arr[num-2];
+    return sum;
 }
 int main()    
 {    
@@ -58,7 +60,8 @@ int main()
     for(int i=0;i<NumberOfElements;i++){
         printf("%d ",arr[i]);
     }
-    
+    Sum = SumSeries(arr,NumberOfElements);
+    printf("\nSum: %d",Sum);
     int even[NumberOfElements];
     getEvenNumbers(arr,NumberOfElements,even);
     printf("\nEven Numbers: ");
