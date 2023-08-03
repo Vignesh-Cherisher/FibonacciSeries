@@ -1,5 +1,5 @@
-#include<stdio.h>
-int n1=0,n2=1,n3,i,NumberOfElements,Sum; 
+#include <stdio.h>  
+int n1=0,n2=1,n3,NumberOfElements,Sum; 
 void generateFibonacciSeries(int Arr[],int num){
     if(num==0){
         return;
@@ -12,7 +12,7 @@ void generateFibonacciSeries(int Arr[],int num){
     if(num==2){
         return;
     }
-    for(i=2;i<NumberOfElements;++i)
+    for(int i=2;i<NumberOfElements;++i)
     {    
         n3=n1+n2;     
         Arr[i]=n3;
@@ -20,6 +20,15 @@ void generateFibonacciSeries(int Arr[],int num){
         n2=n3;    
     }
     return;
+}
+int SumSeries(int Arr[],int num)
+{
+    int sum=0;
+    for(int ind=0;ind<num;ind++)
+    {
+        sum+=Arr[ind];
+    }
+    return sum-1;
 }
 int main()    
 {    
@@ -31,5 +40,7 @@ int main()
     for(int i=0;i<NumberOfElements;i++){
         printf("%d ",arr[i]);
     }
+    int Sum=SumSeries(arr,NumberOfElements);
+    printf("\nSum : %d",Sum);
     return 0;  
 }  
