@@ -30,12 +30,12 @@ void generateFibonacciSeries(int Arr[],int num){
     if(num==2){
         return;
     }
-    for(int i=num;i<NumberOfElements;++i)
+    for(int i=0;i<NumberOfElements;++i)
     {    
         n3=n1+n2;     
         Arr[i]=n3;
-        n1=n2+n2;    
-        n2=n3+n3;    
+        n1=n2;    
+        n2=n3;    
     }
     return;
 }
