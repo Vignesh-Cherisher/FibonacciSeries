@@ -50,6 +50,25 @@ int SumSeries(int Arr[],int num)
     sum += Arr[num-1]+Arr[num-2];
     return sum;
 }
+int nthElement(int num){
+    n1=0,n2=1,n3=0;
+    if(num==0){
+        return -1;
+    }
+    if(num==1){
+        return 0;
+    }
+    if(num==2){
+        return 1;
+    }
+    for(int i=2;i<num;++i)
+    {    
+        n3=n1+n2;
+        n1=n2;    
+        n2=n3;    
+    }
+    return n3;
+}
 int main()    
 {    
     printf("Enter the number of elements : ");    
@@ -74,5 +93,6 @@ int main()
     for(int x=0;x<m;x++){
         printf("%d ",odd[x]);
     }
+    printf("\nThe %d th element is : %d",NumberOfElements,nthElement(NumberOfElements));
     return 0;  
 }  
