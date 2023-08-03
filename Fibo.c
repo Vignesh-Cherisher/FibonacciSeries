@@ -39,9 +39,7 @@ void generateFibonacciSeries(int Arr[],int num){
     }
     return;
 }
-int getMaxValue(int Arr[],int num){
-    return Arr[num-1];
-}
+
 int SumSeries(int Arr[],int num)
 {
     int sum=0;
@@ -96,7 +94,5 @@ int main()
         printf("%d ",odd[x]);
     }
     printf("\nThe %d th element is : %d",NumberOfElements,nthElement(NumberOfElements));
-    int max=getMaxValue(arr,NumberOfElements);
-    printf("\nMaximum Element: %d",max);
     return 0;  
 }  
