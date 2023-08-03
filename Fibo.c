@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdio.h>  
 int n1=0,n2=1,n3,i,NumberOfElements,Sum; 
 void generateFibonacciSeries(int Arr[],int num){
     if(num==0){
@@ -8,8 +7,6 @@ void generateFibonacciSeries(int Arr[],int num){
     if(num==1){
         Arr[0]=0;
     }
-    
-    
     Arr[0]=n1;
     Arr[1]=n2;
     if(num==2){
